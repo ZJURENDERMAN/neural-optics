@@ -1,0 +1,2 @@
+python ../target-generation-tool/gen.py --base_dir ~/neural-optics-dataset/ --resolution 256 256 --digits_only --max_fonts 1 --random_fonts
+python ../target-generation-tool/gen.py --base_dir ~/neural-optics-dataset/ --resolution 256 256 --letters_only --max_fonts 1 --random_fonts

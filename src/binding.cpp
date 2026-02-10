@@ -16,7 +16,6 @@
 #include "bindings/bind_shell.hpp"
 #include "bindings/bind_solid.hpp"
 #include "bindings/bind_scene.hpp"
-#include "bindings/bind_renderer.hpp"
 #include "bindings/bind_parser.hpp"  // 新增
 
 namespace nb = nanobind;
@@ -40,6 +39,5 @@ NB_MODULE(diff_optics, m) {
     bind_spectrum(m);
     bind_optix(m);
     bind_scene(m);
-    bind_renderer(m);
     bind_parser(m);  // 新增
 }

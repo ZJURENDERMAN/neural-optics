@@ -1,0 +1,5 @@
+
+
+CXX_COMPILER: str = 'GNU 12.4.0'
+
+PYTHON_VERSION: str = '3.13.11'

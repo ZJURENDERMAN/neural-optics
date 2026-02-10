@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/wxc/neural-optics/build_cmake/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/drjit/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/drjit/nanobind/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/drjit/ext/drjit-core/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/drjit/ext/drjit-core/ext/nanothread/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/drjit/ext/drjit-core/resources/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/drjit/src/extra/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/drjit/src/python/cmake_install.cmake",
+		"/home/wxc/neural-optics/build_cmake/nanobind/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

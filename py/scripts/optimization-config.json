@@ -1,0 +1,46 @@
+[
+    {
+        "surface": "S2",
+        "name": "stage_0_coarse",
+        "steps": 100,
+        "optimizer": {"type": "adam", "learning_rate": 0.005, "beta1": 0.9, "beta2": 0.999, "amsgrad": true},
+        "sensor": "IrradianceSensor",
+        "sensor_resolution": [64, 64],
+        "loss": {
+            "losses": [
+                {"type": "l1", "weight": 1.0, "normalize": true},
+                {"type": "boundary_penalty", "weight": 3.0, "threshold": 0.05, "power": 1.0}
+            ]
+        }
+    },
+    {
+        "surface": "S2",
+        "name": "stage_1_medium",
+        "steps": 100,
+        "optimizer": {"type": "adam", "learning_rate": 0.0002, "beta1": 0.9, "beta2": 0.999, "amsgrad": true},
+        "sensor": "IrradianceSensor",
+        "sensor_resolution": [128, 128],
+        "loss": {
+            "losses": [
+                {"type": "l1", "weight": 1.0, "normalize": true},
+                {"type": "boundary_penalty", "weight": 8.0, "threshold": 0.04, "power": 1.0},
+                {"type": "concentration", "weight": 2.0}
+            ]
+        }
+    },
+    {
+        "surface": "S2",
+        "name": "stage_2_fine",
+        "steps": 100,
+        "optimizer": {"type": "adam", "learning_rate": 0.00002, "beta1": 0.9, "beta2": 0.999, "amsgrad": true},
+        "sensor": "IrradianceSensor",
+        "sensor_resolution": [256, 256],
+        "loss": {
+            "losses": [
+                {"type": "l1", "weight": 1.0, "normalize": true},
+                {"type": "boundary_penalty", "weight": 15.0, "threshold": 0.02, "power": 1.0},
+                {"type": "concentration", "weight": 5.0}
+            ]
+        }
+    }
+]
