@@ -1,0 +1,44 @@
+[
+    {
+        "surface": "S2",
+        "name": "stage_0_coarse",
+        "steps": 150,
+        "optimizer": {"type": "adam", "learning_rate": 0.01, "beta1": 0.9, "beta2": 0.999, "amsgrad": true},
+        "sensor": "IrradianceSensor",
+        "sensor_resolution": [64, 64],
+        "target": {"file": "../dataset/target_distribution/images/siglogo500.jpg"},
+        "loss": {
+            "losses": [
+                {"type": "l1", "weight": 1.0, "normalize": true}
+            ]
+        }
+    },
+    {
+        "surface": "S2",
+        "name": "stage_1_medium",
+        "steps": 250,
+        "optimizer": {"type": "adam", "learning_rate": 0.001, "beta1": 0.9, "beta2": 0.999, "amsgrad": true},
+        "sensor": "IrradianceSensor",
+        "sensor_resolution": [128, 128],
+        "target": {"file": "../dataset/target_distribution/images/siglogo500.jpg"},
+        "loss": {
+            "losses": [
+                {"type": "l1", "weight": 1.0, "normalize": true}
+            ]
+        }
+    },
+    {
+        "surface": "S2",
+        "name": "stage_2_fine",
+        "steps": 400,
+        "optimizer": {"type": "adam", "learning_rate": 0.0001, "beta1": 0.9, "beta2": 0.999, "amsgrad": true},
+        "sensor": "IrradianceSensor",
+        "sensor_resolution": [256, 256],
+        "target": {"file": "../dataset/target_distribution/images/siglogo500.jpg"},
+        "loss": {
+            "losses": [
+                {"type": "l1", "weight": 1.0, "normalize": true}
+            ]
+        }
+    }
+]
